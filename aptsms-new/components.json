@@ -10,7 +10,6 @@
     "cssVariables": true,
     "prefix": ""
   },
-  "tsx": false,
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
