@@ -247,6 +247,9 @@ function Home() {
 
       {/* Executive council */}
       <div className="flex flex-col items-center">
+        <h2 className="text-green-800 text-[7vw] md:text-[4vw] lg:text-[3vw] font-bold mb-2 font-sans text-center md:text-left">
+              <b>Executive Council</b>
+            </h2>
         <div className="flex gap-20 justify-center flex-wrap">
           {/* for developers below is one card that can mapped using data.map() using an api */}
           <Id
