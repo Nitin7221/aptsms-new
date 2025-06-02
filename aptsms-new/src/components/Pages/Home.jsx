@@ -75,7 +75,11 @@ function Home() {
             <br />
             <br />
             <Button variant="outline">
-              <b>Read More</b>
+
+               <Link to="/about">
+               <b>Read More</b>
+            </Link>
+            
             </Button>
           </p>
         </div>
@@ -151,7 +155,9 @@ function Home() {
               <br />
               <br />
               <Button variant="outline">
-                <b>Read More</b>
+               <Link to="/president-message">
+               <b>Read More</b>
+            </Link>
               </Button>
             </p>
           </div>

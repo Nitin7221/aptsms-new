@@ -1,12 +1,17 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../components/Pages/Home.jsx'
+import About from '../components/Pages/About.jsx'
+import Contact from '../components/Pages/Contact.jsx'
+import PresidentMessage from '../components/Pages/PresidentMessage.jsx'
+import Gallery from '../components/Pages/Gallery.jsx'
 
 const Routing = () => {
   return (
     <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/announcement" element={<div>Announcement</div>}/>
         <Route path="/membership" element={<div>Membership Page</div>} />
         <Route path="/corporate-members" element={<div>List of Corporate Members</div>} />
         <Route path="/life-members" element={<div>List of Life Members</div>} />
@@ -18,9 +23,9 @@ const Routing = () => {
         <Route path="/executive-council" element={<div>Executive Council</div>} />
         <Route path="/endowment-lectures" element={<div>Endowment Lectures</div>} />
         <Route path="/by-laws" element={<div>By-laws</div>} />
-        <Route path="/contact" element={<div>Contact Page</div>} />
-        <Route path="/president-message" element={<div>President Message</div>} />
-        <Route path="/gallery" element={<div>Gallery Page</div>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/president-message" element={<PresidentMessage/>} />
+        <Route path="/gallery" element={<Gallery/>} />
         <Route path="/e-magzine" element={<div>E-Magzine Page</div>} />
       </Routes>
   )
