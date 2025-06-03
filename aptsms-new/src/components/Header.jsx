@@ -1,4 +1,4 @@
-import { Navbar } from './navbar.jsx'
+import { Navbar }from "./Navbar.jsx"
 import { Link } from 'react-router-dom';
 
 function Header() {

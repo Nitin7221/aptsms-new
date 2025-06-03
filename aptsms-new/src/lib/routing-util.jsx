@@ -1,10 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from '../components/Pages/Home.jsx'
+<<<<<<< HEAD
 import About from '../components/Pages/About.jsx'
 import Contact from '../components/Pages/Contact.jsx'
 import PresidentMessage from '../components/Pages/PresidentMessage.jsx'
 import Gallery from '../components/Pages/Gallery.jsx'
+=======
+import MembersList from '../components/Pages/MembersList.jsx'
+>>>>>>> origin/main
 
 const Routing = () => {
   return (
@@ -13,7 +17,7 @@ const Routing = () => {
         <Route path="/about" element={<About/>} />
         <Route path="/announcement" element={<div>Announcement</div>}/>
         <Route path="/membership" element={<div>Membership Page</div>} />
-        <Route path="/corporate-members" element={<div>List of Corporate Members</div>} />
+        <Route path="/corporate-members" element={<MembersList/>} />
         <Route path="/life-members" element={<div>List of Life Members</div>} />
         <Route path="/events" element={<div>Events Page</div>} />
         <Route path="/annual-congress" element={<div>Annual Congress</div>} />
