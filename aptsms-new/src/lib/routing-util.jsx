@@ -1,14 +1,13 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '../components/Pages/Home.jsx'
-<<<<<<< HEAD
-import About from '../components/Pages/About.jsx'
-import Contact from '../components/Pages/Contact.jsx'
-import PresidentMessage from '../components/Pages/PresidentMessage.jsx'
-import Gallery from '../components/Pages/Gallery.jsx'
-=======
-import MembersList from '../components/Pages/MembersList.jsx'
->>>>>>> origin/main
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../components/Pages/Home.jsx';
+import About from '../components/Pages/About.jsx';
+import Contact from '../components/Pages/Contact.jsx';
+import PresidentMessage from '../components/Pages/PresidentMessage.jsx';
+import Gallery from '../components/Pages/Gallery.jsx';
+import MembersList from '../components/Pages/MembersList.jsx';
+
+
 
 const Routing = () => {
   return (
