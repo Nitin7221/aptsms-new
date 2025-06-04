@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../ui/button.jsx";
 import { Link } from "react-router-dom";
 import Id from "../Id.jsx";
+import Membership from "./Membership.jsx";
 
 function Home() {
   return (
@@ -165,92 +166,8 @@ function Home() {
       </div>
 
       {/* Membership Details Card */}
-      <div
-        id="membership"
-        className="w-full flex flex-col items-center justify-center py-12 bg-green-50 dark:bg-gray-900 mt-[10vh]"
-      >
-        <div className="max-w-2xl w-full px-6">
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 flex flex-col items-center border border-green-200 dark:border-green-900">
-            <h2 className="text-green-800 text-[7vw] md:text-[4vw] lg:text-[2vw] font-bold mb-4 text-center font-sans">
-              <b>Membership</b>
-            </h2>
-            <p className="text-gray-700 dark:text-gray-200 text-[4vw] md:text-[1.5vw] lg:text-[1.1vw] mb-6 text-center">
-              Become a member of <b>APTSMS</b> and join a vibrant community of
-              mathematical scientists, educators, and students. Enjoy exclusive
-              access to events, resources, and networking opportunities.
-            </p>
-            <div className="w-full flex flex-col md:flex-row flex-wrap gap-6 mb-6">
-              <div className="flex-1 bg-green-100 dark:bg-green-900 rounded-lg p-4 flex flex-col items-center min-w-[180px]">
-                <span className="text-green-800 font-bold text-[5vw] md:text-[2vw] lg:text-[1.5vw] mb-2">
-                  Corporate
-                </span>
-                <span className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
-                  ₹15,000
-                </span>
-                <span className="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">
-                  Institutional/Corporate Membership
-                </span>
-                <Button variant="outline" className="w-full max-w-xs">
-                  <b>Buy Corporate</b>
-                </Button>
-              </div>
-              <div className="flex-1 bg-green-100 dark:bg-green-900 rounded-lg p-4 flex flex-col items-center min-w-[180px]">
-                <span className="text-green-800 font-bold text-[5vw] md:text-[2vw] lg:text-[1.5vw] mb-2">
-                  Life
-                </span>
-                <span className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
-                  ₹1,000
-                </span>
-                <span className="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">
-                  One-time payment
-                </span>
-                <Button variant="outline" className="w-full max-w-xs">
-                  <b>Buy Life</b>
-                </Button>
-              </div>
-              <div className="flex-1 bg-green-100 dark:bg-green-900 rounded-lg p-4 flex flex-col items-center min-w-[180px]">
-                <span className="text-green-800 font-bold text-[5vw] md:text-[2vw] lg:text-[1.5vw] mb-2">
-                  Annual
-                </span>
-                <span className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
-                  ₹300
-                </span>
-                <span className="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">
-                  Valid for 1 year
-                </span>
-                <Button variant="outline" className="w-full max-w-xs">
-                  <b>Buy Annual</b>
-                </Button>
-              </div>
-              <div className="flex-1 bg-green-100 dark:bg-green-900 rounded-lg p-4 flex flex-col items-center min-w-[180px]">
-                <span className="text-green-800 font-bold text-[5vw] md:text-[2vw] lg:text-[1.5vw] mb-2">
-                  Student
-                </span>
-                <span className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
-                  ₹100
-                </span>
-                <span className="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">
-                  Valid for 1 year (Student ID required)
-                </span>
-                <Button variant="outline" className="w-full max-w-xs">
-                  <b>Buy Student</b>
-                </Button>
-              </div>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400 text-xs text-center">
-              For queries, please{" "}
-              <a
-                href="mailto:aptsms.org@gmail.com"
-                className="text-green-700 underline"
-              >
-                contact us
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <Membership/>
+      
       {/* Executive council */}
       <div className="flex flex-col items-center">
         <h2 className="text-green-800 text-[7vw] md:text-[4vw] lg:text-[3vw] font-bold mb-2 font-sans text-center md:text-left">
