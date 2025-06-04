@@ -7,7 +7,11 @@ import PresidentMessage from '../components/Pages/PresidentMessage.jsx';
 import Gallery from '../components/Pages/Gallery.jsx';
 import MembersList from '../components/Pages/MembersList.jsx';
 import Membership from '../components/Pages/Membership.jsx';
-
+import JournalCard from '../components/Pages/eMagazine.jsx';
+import BylawsPage from '../components/Pages/ByLaws.jsx';
+import EndowmentLectures from '../components/Pages/EndowmentLectures.jsx';
+import InternationalConferencesPage from '../components/Pages/IntConferences.jsx';
+import CongressPage from '../components/Pages/AnnualCongress.jsx';
 
 const Routing = () => {
   return (
@@ -19,17 +23,17 @@ const Routing = () => {
         <Route path="/corporate-members" element={<MembersList/>} />
         <Route path="/life-members" element={<div>List of Life Members</div>} />
         <Route path="/events" element={<div>Events Page</div>} />
-        <Route path="/annual-congress" element={<div>Annual Congress</div>} />
-        <Route path="/international-conferences" element={<div>International Conferences</div>} />
-        <Route path="/about-aptsms" element={<div>About APTSMS</div>} />
+        <Route path="/annual-congress" element={<CongressPage/>} />
+        <Route path="/international-conferences" element={<InternationalConferencesPage/>} />
+        {/* {<Route path="/about-aptsms" element={<div>About APTSMS</div>} />} */}
         <Route path="/aptsms-presidents" element={<div>APTSMS Presidents</div>} />
         <Route path="/executive-council" element={<div>Executive Council</div>} />
-        <Route path="/endowment-lectures" element={<div>Endowment Lectures</div>} />
-        <Route path="/by-laws" element={<div>By-laws</div>} />
+        <Route path="/endowment-lectures" element={<EndowmentLectures/>} />
+        <Route path="/by-laws" element={<BylawsPage/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/president-message" element={<PresidentMessage/>} />
         <Route path="/gallery" element={<Gallery/>} />
-        <Route path="/e-magzine" element={<div>E-Magzine Page</div>} />
+        <Route path="/e-magzine" element={<JournalCard/>} />
       </Routes>
   )
 }
