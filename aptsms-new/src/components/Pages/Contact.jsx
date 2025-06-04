@@ -3,70 +3,64 @@ import { Mail, Phone, MapPin, User, Building } from 'lucide-react';
 
 
 
-const ContactCard = ({ name, title, department, institution, location, email, phone, photo, bgColor = "bg-blue-500" }) => {
+const ContactCard = ({ name, title, department, institution, location, email, phone, photo, bgColor = "bg-green-700" }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 max-w-sm mx-auto">
+    <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 max-w-sm mx-auto border border-green-100 dark:border-green-900">
       {/* Header with colored background */}
-      <div className={`${bgColor} rounded-t-xl p-6 text-white`}>
-        <div className="flex flex-col items-center">
-          <div className="w-28 h-28 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4 overflow-hidden">
-            {photo ? (
-              <img 
-                src={photo} 
-                alt={name}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <User size={40} className="text-white" />
-            )}
-          </div>
-          <h2 className="text-xl font-bold text-center">{name}</h2>
-          <p className="text-blue-100 text-center mt-1">{title}</p>
+      <div className={`${bgColor} rounded-t-2xl p-6 text-white flex flex-col items-center`}>
+        <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3 overflow-hidden border-4 border-white/30">
+          {photo ? (
+            <img 
+              src={photo} 
+              alt={name}
+              className="w-full h-full object-cover rounded-full"
+            />
+          ) : (
+            <User size={40} className="text-white" />
+          )}
         </div>
+        <h2 className="text-lg font-bold text-center tracking-tight">{name}</h2>
+        <p className="text-green-100 text-center mt-1 text-sm font-medium">{title}</p>
       </div>
-      
       {/* Card content */}
       <div className="p-6 space-y-4">
         <div className="flex items-start space-x-3">
-          <Building className="text-gray-500 mt-1 flex-shrink-0" size={18} />
+          <Building className="text-green-600 mt-1 flex-shrink-0" size={18} />
           <div>
-            <p className="text-gray-800 font-medium">{department}</p>
-            <p className="text-gray-600 text-sm">{institution}</p>
-            {location && <p className="text-gray-600 text-sm">{location}</p>}
+            <p className="text-gray-800 font-medium leading-tight">{department}</p>
+            <p className="text-gray-600 text-sm leading-tight">{institution}</p>
+            {location && <p className="text-gray-600 text-xs leading-tight">{location}</p>}
           </div>
         </div>
-        
         {email && (
           <div className="flex items-center space-x-3">
-            <Mail className="text-gray-500 flex-shrink-0" size={18} />
+            <Mail className="text-green-600 flex-shrink-0" size={18} />
             <a 
               href={`mailto:${email}`} 
-              className="text-blue-600 hover:text-blue-800 transition-colors text-sm break-all"
+              className="text-green-700 hover:text-green-900 transition-colors text-sm break-all font-medium"
             >
               {email}
             </a>
           </div>
         )}
-        
         {phone && (
           <div className="flex items-center space-x-3">
-            <Phone className="text-gray-500 flex-shrink-0" size={18} />
+            <Phone className="text-green-600 flex-shrink-0" size={18} />
             <a 
               href={`tel:${phone}`} 
-              className="text-blue-600 hover:text-blue-800 transition-colors text-sm"
+              className="text-green-700 hover:text-green-900 transition-colors text-sm font-medium"
             >
               {phone}
             </a>
           </div>
         )}
       </div>
-      
       {/* Action buttons */}
       <div className="px-6 pb-6 flex space-x-2">
         {email && (
           <button 
             onClick={() => window.open(`mailto:${email}`)}
-            className={`flex-1 ${bgColor} text-white py-2 px-4 rounded-lg hover:opacity-90 transition-opacity text-sm font-medium`}
+            className={`flex-1 ${bgColor} text-white py-2 px-4 rounded-lg hover:opacity-90 transition-opacity text-sm font-semibold shadow`}
           >
             Send Email
           </button>
@@ -74,7 +68,7 @@ const ContactCard = ({ name, title, department, institution, location, email, ph
         {phone && (
           <button 
             onClick={() => window.open(`tel:${phone}`)}
-            className="flex-1 bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors text-sm font-medium"
+            className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-sm font-semibold shadow"
           >
             Call
           </button>
@@ -111,13 +105,12 @@ const ContactCards = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900 dark:to-green-800 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact</h1>
-          <div className="w-24 h-1 bg-blue-500 mx-auto rounded"></div>
+          <h1 className="text-4xl font-extrabold text-green-700 mb-4 tracking-tight drop-shadow">Contact</h1>
+          <div className="w-24 h-1 bg-green-500 mx-auto rounded"></div>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {contacts.map((contact, index) => (
             <ContactCard key={index} {...contact} />
