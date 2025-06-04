@@ -63,7 +63,7 @@ const ConferenceCard = ({ conference, index }) => {
       scale: 1,
       transition: {
         duration: 0.6,
-        delay: index * 0.2,
+        delay: index * 0.1,
         ease: "easeOut"
       }
     },
@@ -71,7 +71,7 @@ const ConferenceCard = ({ conference, index }) => {
       y: -8,
       scale: 1.02,
       transition: {
-        duration: 0.3,
+        duration: 0.1,
         ease: "easeInOut"
       }
     }
@@ -109,9 +109,9 @@ const ConferenceCard = ({ conference, index }) => {
         {/* Conference Badge */}
         <motion.div 
           className="flex items-center gap-3 mb-6"
-          initial={{ x: -20, opacity: 0 }}
+          initial={{ x: -20, opacity: 0 }}  
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: index * 0.2 + 0.3, duration: 0.5 }}
+          transition={{ delay: index * 0.2 + 0.3, duration: 0.3 }}
         >
           <motion.div 
             className="p-3 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl"

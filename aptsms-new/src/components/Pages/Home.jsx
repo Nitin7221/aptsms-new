@@ -187,7 +187,11 @@ function Home() {
           ></Id>
         </div>
         <Button variant="outline">
-          <b>See More</b>
+         
+
+            <Link to="/executive-council">
+                                      <b>See More</b>
+                                      </Link>
         </Button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from '../ui/button'
+import { Link } from "react-router-dom";
 
 function Membership() {
   return (
@@ -31,7 +32,13 @@ function Membership() {
                   Institutional/Corporate Membership
                 </span>
                 <Button variant="outline" className="w-full max-w-xs font-semibold border-green-600 hover:bg-green-100 dark:hover:bg-green-800 transition-all duration-200">
-                  <b>Join Corporate</b>
+                  
+
+                 <Link to="/announcement">
+                              <b>Join Corporate</b>
+                            </Link>
+                            
+
                 </Button>
               </div>
               {/* Life Membership Card */}
@@ -47,7 +54,12 @@ function Membership() {
                   One-time payment
                 </span>
                 <Button variant="outline" className="w-full max-w-xs font-semibold border-yellow-600 hover:bg-yellow-100 dark:hover:bg-yellow-800 transition-all duration-200">
-                  <b>Join Life</b>
+                  
+                       <Link to="/announcement">
+                            <b>Join Life</b>
+                            </Link>
+
+                     
                 </Button>
               </div>
               {/* Annual Membership Card */}
@@ -63,7 +75,12 @@ function Membership() {
                   Valid for 1 year
                 </span>
                 <Button variant="outline" className="w-full max-w-xs font-semibold border-blue-600 hover:bg-blue-100 dark:hover:bg-blue-800 transition-all duration-200">
-                  <b>Join Annual</b>
+                
+                    
+                       <Link to="/announcement">
+                             <b>Join Annual</b>
+                            </Link>
+                    
                 </Button>
               </div>
               {/* Student Membership Card */}
@@ -79,7 +96,12 @@ function Membership() {
                   Valid for 1 year (Student ID required)
                 </span>
                 <Button variant="outline" className="w-full max-w-xs font-semibold border-pink-600 hover:bg-pink-100 dark:hover:bg-pink-800 transition-all duration-200">
-                  <b>Join Student</b>
+                
+                      
+                         <Link to="/announcement">
+                              <b>Join Student</b>
+                            </Link>
+
                 </Button>
               </div>
             </div>

@@ -253,19 +253,7 @@ const CongressPage = () => {
               </div>
 
               {/* Decorative Elements */}
-              <motion.div
-                className="absolute bottom-2 right-2 w-16 h-16 bg-gradient-to-br from-green-200/30 to-green-300/30 rounded-full"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 90, 0]
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.2
-                }}
-              />
+             
             </motion.div>
           ))}
         </motion.div>

@@ -12,6 +12,8 @@ import BylawsPage from '../components/Pages/ByLaws.jsx';
 import EndowmentLectures from '../components/Pages/EndowmentLectures.jsx';
 import InternationalConferencesPage from '../components/Pages/IntConferences.jsx';
 import CongressPage from '../components/Pages/AnnualCongress.jsx';
+import APTSMSPresidents from '../components/Pages/APTSMSPresidents.jsx'
+import ExecutiveCouncil from '../components/Pages/ExecutiveCouncil.jsx'
 
 const Routing = () => {
   return (
@@ -25,9 +27,9 @@ const Routing = () => {
         <Route path="/events" element={<div>Events Page</div>} />
         <Route path="/annual-congress" element={<CongressPage/>} />
         <Route path="/international-conferences" element={<InternationalConferencesPage/>} />
-        {/* {<Route path="/about-aptsms" element={<div>About APTSMS</div>} />} */}
-        <Route path="/aptsms-presidents" element={<div>APTSMS Presidents</div>} />
-        <Route path="/executive-council" element={<div>Executive Council</div>} />
+        {<Route path="/about-aptsms" element={<About/>} />}
+        <Route path="/aptsms-presidents" element={<APTSMSPresidents/>} />
+        <Route path="/executive-council" element={<ExecutiveCouncil/>} />
         <Route path="/endowment-lectures" element={<EndowmentLectures/>} />
         <Route path="/by-laws" element={<BylawsPage/>} />
         <Route path="/contact" element={<Contact/>} />
