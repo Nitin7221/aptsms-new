@@ -113,15 +113,6 @@ const PresidentMessage = () => {
 
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="bg-gray-50 py-8 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-600">
-            © APTSMS - Andhra Pradesh Telangana Society for Mathematical Sciences
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
