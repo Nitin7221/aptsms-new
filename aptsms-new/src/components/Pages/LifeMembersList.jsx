@@ -5,7 +5,6 @@ const MembersList = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-3xl font-bold text-gray-800 mb-2">
             Life Members
@@ -13,9 +12,7 @@ const MembersList = () => {
           <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Table Container */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-green-100">
-          {/* Table Header */}
           <div className="bg-gradient-to-r from-green-500 to-green-600 text-white">
             <div className="grid grid-cols-12 gap-4 p-6">
               <div className="col-span-1">
@@ -36,7 +33,6 @@ const MembersList = () => {
             </div>
           </div>
 
-          {/* Table Body */}
           <div className="divide-y divide-green-100">
             {lifeMembers.map((member, index) => (
               <div

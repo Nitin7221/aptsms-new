@@ -76,7 +76,6 @@ function Home() {
             <br />
             <br />
             <Button variant="outline">
-
                <Link to="/about">
                <b>Read More</b>
             </Link>
@@ -86,7 +85,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Objectives Section */}
       <div
         id="objectives"
         className="w-full flex flex-col items-center justify-center py-12 bg-green-50 dark:bg-gray-900 mt-[10vh]"
@@ -125,7 +123,6 @@ function Home() {
         </div>
       </div>
 
-      {/* President Section */}
       <div
         id="president"
         className="w-full flex flex-col items-center justify-center py-12 bg-white dark:bg-gray-800 mt-[10vh]"
@@ -165,16 +162,13 @@ function Home() {
         </div>
       </div>
 
-      {/* Membership Details Card */}
       <Membership/>
       
-      {/* Executive council */}
       <div className="flex flex-col items-center">
         <h2 className="text-green-800 text-[7vw] md:text-[4vw] lg:text-[3vw] font-bold mb-2 font-sans text-center md:text-left">
           <b>Executive Council</b>
         </h2>
         <div className="flex gap-20 justify-center flex-wrap">
-          {/* for developers below is one card that can mapped using data.map() using an api */}
           <Id
             name="N. Ramakrishna"
             designation="Prof."

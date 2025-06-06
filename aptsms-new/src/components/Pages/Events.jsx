@@ -4,7 +4,6 @@ function Events() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white p-4 md:p-8">
       <div className="max-w-3xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-3xl font-bold text-gray-800 mb-2">
             Upcoming Events
@@ -12,7 +11,6 @@ function Events() {
           <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Event Card */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-green-100 p-8">
           <h2 className="text-2xl font-semibold text-green-700 mb-2">
             XXXIII Annual Congress of APTSMS &amp; International Conference on

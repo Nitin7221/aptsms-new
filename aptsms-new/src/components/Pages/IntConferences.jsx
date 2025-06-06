@@ -1,5 +1,3 @@
-// MADE BY CLAUDE 
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, User, Globe, Award, ChevronRight, Star, BookOpen, Users } from 'lucide-react';
@@ -22,25 +20,6 @@ const AnimatedCounter = ({ end, duration = 2000 }) => {
 
   return <span>{count}</span>;
 };
-
-const FloatingIcon = ({ Icon, delay = 0, position }) => (
-  <motion.div
-    className="absolute opacity-10 text-green-300"
-    style={position}
-    animate={{
-      y: [-10, -30, -10],
-      rotate: [0, 180, 360],
-    }}
-    transition={{
-      duration: 8,
-      repeat: Infinity,
-      ease: "easeInOut",
-      delay: delay
-    }}
-  >
-    <Icon size={40} />
-  </motion.div>
-);
 
 const ConferenceCard = ({ conference, index }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -89,7 +68,7 @@ const ConferenceCard = ({ conference, index }) => {
       className="relative group"
     >
       <div className="relative bg-white rounded-3xl p-8 border-2 border-green-100 hover:border-green-300 transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-green-100/50 overflow-hidden">
-        {/* Background Pattern */}
+        
         <motion.div 
           className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50"
           initial={{ opacity: 0 }}
@@ -97,7 +76,6 @@ const ConferenceCard = ({ conference, index }) => {
           transition={{ duration: 0.3 }}
         />
         
-        {/* Floating Number */}
         <motion.div 
           className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg"
           animate={{ rotate: isHovered ? 0 : 12 }}
@@ -106,7 +84,7 @@ const ConferenceCard = ({ conference, index }) => {
           {index + 1}
         </motion.div>
 
-        {/* Conference Badge */}
+        
         <motion.div 
           className="flex items-center gap-3 mb-6"
           initial={{ x: -20, opacity: 0 }}  
@@ -131,7 +109,7 @@ const ConferenceCard = ({ conference, index }) => {
           </div>
         </motion.div>
 
-        {/* President Section */}
+        
         <motion.div 
           className="mb-6 p-4 bg-green-50 rounded-xl border border-green-100"
           initial={{ y: 20, opacity: 0 }}
@@ -151,7 +129,7 @@ const ConferenceCard = ({ conference, index }) => {
           <p className="text-xl font-semibold text-gray-800">{conference.president}</p>
         </motion.div>
 
-        {/* Host Section */}
+        
         <motion.div 
           className="mb-6"
           initial={{ y: 20, opacity: 0 }}
@@ -171,7 +149,7 @@ const ConferenceCard = ({ conference, index }) => {
           <p className="text-gray-700 leading-relaxed">{conference.host}</p>
         </motion.div>
 
-        {/* Hover Effect Arrow */}
+        
         <motion.div 
           className="absolute bottom-4 right-4"
           initial={{ x: 20, opacity: 0 }}
@@ -184,7 +162,7 @@ const ConferenceCard = ({ conference, index }) => {
           <ChevronRight className="w-6 h-6 text-green-500" />
         </motion.div>
 
-        {/* Decorative Elements */}
+        
         <motion.div 
           className="absolute top-4 left-4 w-2 h-2 bg-green-400 rounded-full"
           animate={{ scale: [1, 1.5, 1] }}
@@ -244,15 +222,9 @@ export default function InternationalConferencesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-green-50/30 to-emerald-50/20 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <FloatingIcon Icon={Globe} delay={0} position={{ top: '10%', left: '5%' }} />
-      <FloatingIcon Icon={BookOpen} delay={2} position={{ top: '60%', right: '8%' }} />
-      <FloatingIcon Icon={Users} delay={4} position={{ bottom: '20%', left: '10%' }} />
-      <FloatingIcon Icon={Award} delay={6} position={{ top: '30%', right: '15%' }} />
-
-      {/* Main Content */}
+      
       <div className="container mx-auto px-4 py-12 relative z-10">
-        {/* Hero Section */}
+        
         <motion.div 
           className="text-center mb-16"
           variants={containerVariants}
@@ -287,7 +259,7 @@ export default function InternationalConferencesPage() {
           </motion.p>
         </motion.div>
 
-        {/* Conferences Grid */}
+        
         <motion.div 
           className="grid gap-8 max-w-6xl mx-auto"
           initial="hidden"
@@ -303,7 +275,7 @@ export default function InternationalConferencesPage() {
           ))}
         </motion.div>
 
-        {/* Footer Section */}
+        
         <motion.div 
           className="text-center mt-16 pt-12 border-t border-green-100"
           initial={{ opacity: 0, y: 30 }}
@@ -326,7 +298,7 @@ export default function InternationalConferencesPage() {
         </motion.div>
       </div>
 
-      {/* Gradient Overlays */}
+      
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent pointer-events-none"></div>
     </div>
   );
