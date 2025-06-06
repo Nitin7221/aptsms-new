@@ -81,22 +81,6 @@ const APTSMSPresidents = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center mt-8">
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6 max-w-md mx-auto">
-            <p className="text-yellow-800 text-sm font-medium">
-              <span className="font-bold">Note:</span> '-' will update soon
-            </p>
-          </div>
-          <p className="text-gray-600 text-sm">
-          Andhra Pradesh & Telangana Society for Mathematical Sciences
-          </p>
-          <div className="flex justify-center items-center mt-4 space-x-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-          </div>
-        </div>
       </div>
     </div>
   );
