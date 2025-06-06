@@ -15,6 +15,7 @@ import CongressPage from '../components/Pages/AnnualCongress.jsx';
 import APTSMSPresidents from '../components/Pages/APTSMSPresidents.jsx'
 import ExecutiveCouncil from '../components/Pages/ExecutiveCouncil.jsx'
 import LifeMembersList from '../components/Pages/LifeMembersList.jsx'
+import Events from '../components/Pages/Events.jsx';
 
 const Routing = () => {
   return (
@@ -25,7 +26,7 @@ const Routing = () => {
         <Route path="/membership" element={<Membership/>} />
         <Route path="/corporate-members" element={<MembersList/>} />
         <Route path="/life-members" element={<LifeMembersList/>} />
-        <Route path="/events" element={<div>Events Page</div>} />
+        <Route path="/events" element={<Events/>} />
         <Route path="/annual-congress" element={<CongressPage/>} />
         <Route path="/international-conferences" element={<InternationalConferencesPage/>} />
         {<Route path="/about-aptsms" element={<About/>} />}
