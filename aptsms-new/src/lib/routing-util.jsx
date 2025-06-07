@@ -16,13 +16,14 @@ import APTSMSPresidents from '../components/Pages/APTSMSPresidents.jsx'
 import ExecutiveCouncil from '../components/Pages/ExecutiveCouncil.jsx'
 import LifeMembersList from '../components/Pages/LifeMembersList.jsx'
 import Events from '../components/Pages/Events.jsx';
+import Announcement from '../components/Pages/Announcement.jsx';
 
 const Routing = () => {
   return (
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />
-        <Route path="/announcement" element={<div>Announcement</div>}/>
+        <Route path="/announcement" element={<Announcement/>}/>
         <Route path="/membership" element={<Membership/>} />
         <Route path="/corporate-members" element={<MembersList/>} />
         <Route path="/life-members" element={<LifeMembersList/>} />
