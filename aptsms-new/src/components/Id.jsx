@@ -6,7 +6,7 @@ function Id(props) {
     <div className="flex flex-col items-center justify-center py-8">
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center border border-green-200 dark:border-green-900 max-w-xs w-full">
         <img
-          src={src}
+          src={`${import.meta.env.BASE_URL}${src}`}
           alt={name}
           className="w-32 h-32 rounded-full object-cover shadow-md border-2 border-green-100 mb-4"
         />

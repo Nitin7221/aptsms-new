@@ -176,7 +176,7 @@ function Home() {
             college="NIT, Warangal"
             mail=""
             number=""
-            src="/images/Srinivasacharya.jpg"
+            src="images/Srinivasacharya.jpg"
           />
           <Id
             name="A Chandulal"
@@ -186,7 +186,7 @@ function Home() {
             college="National Sanskrit University, Tirupati"
             mail=""
             number=""
-            src="/images/chandulal.jpg"
+            src="images/chandulal.jpg"
           />
           <Id
             name="A Benerji Babu"
@@ -196,7 +196,7 @@ function Home() {
             college="NIT, Warangal"
             mail=""
             number=""
-            src="/images/benerji_babu.jpg"
+            src="images/benerji_babu.jpg"
           />
           <Id
             name="N. Ramakrishna"
@@ -206,7 +206,7 @@ function Home() {
             college="Andhra University, Visakhapatnam"
             mail="captdrnrk@gmail.com"
             number="+91 9440442737"
-            src="/images/NRamakrishna.jpg"
+            src="images/NRamakrishna.jpg"
           />
           <Id
             name="P Narasimha Swamy"
@@ -216,7 +216,7 @@ function Home() {
             college="GITAM University, Hyderabad Campus"
             mail="swamy.pasham@gmail.com"
             number="+91 9948525133"
-            src="/images/narasimha_swamy.jpeg"
+            src="images/narasimha_swamy.jpeg"
           />
           <Id
             name="Maddileti Pasupula"
@@ -226,7 +226,7 @@ function Home() {
             college="University College of Science, Mahatma Gandhi University, Nalgonda"
             mail="madhu.june5@gmail.com"
             number="+91 6281897948"
-            src="/images/maddileti_pasupula.jpeg"
+            src="images/maddileti_pasupula.jpeg"
           />
 
         </div>
