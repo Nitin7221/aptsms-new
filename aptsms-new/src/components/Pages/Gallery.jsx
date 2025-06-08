@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { Card, CardContent } from '../ui/card';
 
 const ConferenceGallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -84,49 +85,53 @@ const ConferenceGallery = () => {
   }, [lightboxOpen, nextImage, prevImage]);
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="pt-16 pb-12 px-4 bg-gradient-to-b from-green-50 via-white to-white dark:from-green-900 dark:via-gray-900 dark:to-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-green-700 mb-4 drop-shadow-lg tracking-tight">
-            Gallery
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-medium max-w-2xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-8 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-green-800 mb-2">Gallery</h1>
+          <div className="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
             Explore moments from our conferences, workshops, and events. Click any image to view in full screen.
           </p>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 pb-16">
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="mb-6 break-inside-avoid group relative bg-gradient-to-br from-green-50 to-gray-100 dark:from-green-900 dark:to-gray-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-400 cursor-pointer border-2 border-green-100 dark:border-green-900"
-              onClick={() => openLightbox(index)}
-            >
-              {!imageLoaded[index] && (
-                <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 animate-pulse"></div>
-              )}
-              <img
-                src={image}
-                alt={`Gallery image ${index + 1}`}
-                className={`w-full h-auto object-cover transition-all duration-700 group-hover:scale-110 ${
-                  imageLoaded[index] ? 'block' : 'hidden'
-                }`}
-                onLoad={() => handleImageLoad(index)}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-700/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                <div className="bg-green-700/30 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
-                  <ZoomIn className="w-8 h-8 text-white" />
+        {/* Gallery Card */}
+        <Card>
+          <CardContent className="p-6 md:p-10">
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="mb-6 break-inside-avoid group relative bg-gradient-to-br from-green-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-400 cursor-pointer border-2 border-green-100"
+                  onClick={() => openLightbox(index)}
+                >
+                  {!imageLoaded[index] && (
+                    <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 animate-pulse"></div>
+                  )}
+                  <img
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    className={`w-full h-auto object-cover transition-all duration-700 group-hover:scale-110 ${
+                      imageLoaded[index] ? 'block' : 'hidden'
+                    }`}
+                    onLoad={() => handleImageLoad(index)}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-700/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                    <div className="bg-green-700/30 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
+                      <ZoomIn className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-green-400/40 via-transparent to-green-400/40 opacity-80"></div>
+                  <div className="absolute top-0 right-0 w-0 h-0 border-l-[30px] border-l-transparent border-t-[30px] border-t-green-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-              </div>
-              <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-green-400/40 via-transparent to-green-400/40 opacity-80"></div>
-              <div className="absolute top-0 right-0 w-0 h-0 border-l-[30px] border-l-transparent border-t-[30px] border-t-green-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              ))}
             </div>
-          ))}
-        </div>
+          </CardContent>
+        </Card>
       </div>
 
+      {/* Lightbox */}
       {lightboxOpen && (
         <div className="fixed inset-0 bg-gradient-to-br from-green-900 via-black to-green-800/90 backdrop-blur-md z-50 overflow-auto">
           <div className="min-h-screen flex items-center justify-center p-4">
@@ -171,11 +176,6 @@ const ConferenceGallery = () => {
           </div>
         </div>
       )}
-
-      <div className="fixed top-20 left-10 w-3 h-3 bg-green-400/40 rounded-full animate-pulse"></div>
-      <div className="fixed top-32 right-20 w-4 h-4 bg-green-500/30 rounded-full animate-pulse delay-1000"></div>
-      <div className="fixed bottom-32 left-16 w-2 h-2 bg-green-600/50 rounded-full animate-pulse delay-500"></div>
-      <div className="fixed bottom-20 right-32 w-3 h-3 bg-green-400/40 rounded-full animate-pulse delay-700"></div>
     </div>
   );
 };

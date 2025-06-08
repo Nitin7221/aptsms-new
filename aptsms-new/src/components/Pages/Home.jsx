@@ -76,10 +76,9 @@ function Home() {
             <br />
             <br />
             <Button variant="outline">
-               <Link to="/about">
-               <b>Read More</b>
-            </Link>
-            
+              <Link to="/about">
+                <b>Read More</b>
+              </Link>
             </Button>
           </p>
         </div>
@@ -153,39 +152,87 @@ function Home() {
               <br />
               <br />
               <Button variant="outline">
-               <Link to="/president-message">
-               <b>Read More</b>
-            </Link>
+                <Link to="/president-message">
+                  <b>Read More</b>
+                </Link>
               </Button>
             </p>
           </div>
         </div>
       </div>
 
-      <Membership/>
-      
+      <Membership />
+
       <div className="flex flex-col items-center">
         <h2 className="text-green-800 text-[7vw] md:text-[4vw] lg:text-[3vw] font-bold mb-2 font-sans text-center md:text-left">
           <b>Executive Council</b>
         </h2>
         <div className="flex gap-20 justify-center flex-wrap">
           <Id
+            name="D Srinivasacharya"
+            designation="Prof."
+            role="President"
+            assigned="Department of Mathematics"
+            college="NIT, Warangal"
+            mail=""
+            number=""
+            src="/public/images/Srinivasacharya.jpg"
+          />
+          <Id
+            name="A Chandulal"
+            designation="Dr."
+            role="Vice President"
+            assigned="Assistant Professor"
+            college="National Sanskrit University, Tirupati"
+            mail=""
+            number=""
+            src="/public/images/chandulal.jpg"
+          />
+          <Id
+            name="A Benerji Babu"
+            designation="Prof."
+            role="Vice President"
+            assigned="Department of Mathematics"
+            college="NIT, Warangal"
+            mail=""
+            number=""
+            src="/public/images/benerji_babu.jpg"
+          />
+          <Id
             name="N. Ramakrishna"
             designation="Prof."
             role="General Secretary"
             assigned="Department of Mathematics"
-            college="Andhra university, Visakhapatnam "
+            college="Andhra University, Visakhapatnam"
             mail="captdrnrk@gmail.com"
             number="+91 9440442737"
-            src="https://aptsms.org/assets/images/NRamakrishna.jpg"
-          ></Id>
+            src="/public/images/NRamakrishna.jpg"
+          />
+          <Id
+            name="P Narasimha Swamy"
+            designation="Dr."
+            role="Office Secretary"
+            assigned="Department of Mathematics"
+            college="GITAM University, Hyderabad Campus"
+            mail="swamy.pasham@gmail.com"
+            number="+91 9948525133"
+            src="/public/images/narasimha_swamy.jpeg"
+          />
+          <Id
+            name="Maddileti Pasupula"
+            designation="Dr."
+            role="Treasurer"
+            assigned="Department of Mathematics"
+            college="University College of Science, Mahatma Gandhi University, Nalgonda"
+            mail="madhu.june5@gmail.com"
+            number="+91 6281897948"
+            src="/public/images/maddileti_pasupula.jpeg"
+          />
         </div>
         <Button variant="outline">
-         
-
-            <Link to="/executive-council">
-                                      <b>See More</b>
-                                      </Link>
+          <Link to="/executive-council">
+            <b>See More</b>
+          </Link>
         </Button>
       </div>
     </div>
