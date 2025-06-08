@@ -7,7 +7,7 @@ function Footer() {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-8">
                 {/* Logo and copyright */}
                 <div className="flex flex-col items-center md:items-start gap-2">
-                    <img src="/src/assets/logo.png" alt="APTSMS Logo" className="w-16 h-16 mb-2 rounded-full shadow-lg border-2 border-green-400 bg-white p-1" />
+                    <img src="/images/logo.png" alt="APTSMS Logo" className="w-16 h-16 mb-2 rounded-full shadow-lg border-2 border-green-400 bg-white p-1" />
                     <span className="text-lg font-bold tracking-wide">APTSMS</span>
                     <span className="text-xs text-gray-300">Andhra Pradesh & Telangana Society for Mathematical Sciences</span>
                     <span className="text-xs text-gray-400 mt-2">&copy; {new Date().getFullYear()} APTSMS. All rights reserved.</span>

@@ -1,12 +1,67 @@
-# React + Vite
+# APTSMS Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for the Andhra Pradesh & Telangana Society for Mathematical Sciences (APTSMS), built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- Home, About, Contact, Events, Gallery, Membership, and more
+- Executive Council and Members Directory
+- President's Message and Announcements
+- Annual Congress, Endowment Lectures, International Conferences
+- eMagazine and By-Laws
+- Responsive design with modern UI components
+- SPA navigation with React Router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- [React](https://react.dev/) (with hooks)
+- [Vite](https://vitejs.dev/) (fast dev/build)
+- [Tailwind CSS](https://tailwindcss.com/) (utility-first styling)
+- [React Router](https://reactrouter.com/)
+- [Lucide React](https://lucide.dev/) (icons)
 
-## Expanding the ESLint configuration
+## Project Structure
+```
+src/
+  App.jsx            # Main app layout
+  assets/            # Static assets (logo, images)
+  components/
+    Header.jsx       # Top navigation/header
+    Footer.jsx       # Footer with navigation
+    Navbar.jsx       # (if used)
+    Id.jsx           # Executive council card
+    Pages/           # All main pages (About, Home, Events, etc.)
+    ui/              # Reusable UI components (Button, Card, Table, etc.)
+  lib/
+    routing-util.jsx # All route definitions
+    utils.js         # (utility functions)
+public/
+  images/            # Council/member images
+  MembershipRegistration/ # Membership form PDF
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. **Install dependencies**
+   ```sh
+   npm install
+   ```
+2. **Run the development server**
+   ```sh
+   npm run dev
+   ```
+3. **Build for production**
+   ```sh
+   npm run build
+   ```
+4. **Preview production build**
+   ```sh
+   npm run preview
+   ```
+
+## Customization
+- Update council/member images in `public/images/`
+- Edit content in `src/components/Pages/`
+- Update logo in `src/assets/logo.png`
+- Adjust theme/colors in `tailwind.config.js` and `index.css`
+
+## License
+This project is for APTSMS and is not intended for commercial use.
