@@ -13,7 +13,7 @@ function Home() {
       >
         <div className="flex flex-col items-center w-full max-w-4xl">
           <img
-            src="https://aptsms.org/assets/images/logo.png"
+            src={`${import.meta.env.BASE_URL}images/logo.png`}
             alt="logo"
             className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-auto mx-auto mb-4"
           />

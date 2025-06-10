@@ -11,7 +11,7 @@ const ContactCard = ({ name, title, department, institution, location, email, ph
         <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3 overflow-hidden border-4 border-white/30">
           {photo ? (
             <img 
-              src={photo} 
+              src={`${import.meta.env.BASE_URL}${photo.startsWith('/') ? photo.slice(1) : photo}`}
               alt={name}
               className="w-full h-full object-cover rounded-full"
             />

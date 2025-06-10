@@ -7,9 +7,9 @@ function Header() {
             <div className='w-[300px] md:w-[390px] lg:w-[480px] min-h-[150px] flex flex-col justify-center items-center'>
                 <Link to="/">
                     <img
-                        src="https://aptsms.org/assets/images/largelogo.png"
+                        src={`${import.meta.env.BASE_URL}images/largelogo.png`}
                         className="h-auto max-w-[300px] md:max-w-[390px] lg:max-w-[480px] object-contain"
-                        alt="large-logo"
+                        alt="APTSMS logo"
                     />
                 </Link>
             </div>

@@ -14,7 +14,7 @@ const PresidentMessage = () => {
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-green-100 p-8">
           <div className="flex flex-col md:flex-row items-center mb-6 gap-6">
             <img 
-              src="/images/Srinivasacharya.jpg" 
+              src={`${import.meta.env.BASE_URL}images/Srinivasacharya.jpg`} 
               alt="Prof. D Srinivasacharya"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-green-400 shadow-lg mb-4 md:mb-0"
             />

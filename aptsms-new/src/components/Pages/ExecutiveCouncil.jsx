@@ -179,7 +179,7 @@ const ExecutiveCouncil = () => {
               member.isHighlighted ? 'border-green-400' : 'border-green-200'
             } shadow-md`}>
               <img 
-                src={member.image} 
+                src={`${import.meta.env.BASE_URL}${member.image.startsWith('/') ? member.image.slice(1) : member.image}`}
                 alt={member.name}
                 className="w-full h-full object-cover"
                 onError={(e) => {
